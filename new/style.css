@@ -1,0 +1,62 @@
+.content {
+	width: 600px;
+
+}
+#gameBoard {
+	width: 360px;
+	margin: 0;
+}
+
+div > .col {
+	background-color: #7988C6;
+	background-image: none;
+	width: 100px;
+	height: 100px;
+	border: 2px groove #7B83A6;
+	border-radius: 4px;
+	font-size: 24px;
+	display: inline-block;
+	margin: 1px;
+
+}
+.input {
+	
+	padding: 5px;
+	width: 200px;
+	margin-left: 5px;
+	display: inline;
+
+}
+.button {
+	padding: 2px;
+	width: auto;
+	margin: 2px; 
+}
+.TreeBy3, .FourBy4, .FiveBy5 {
+	font-size: 21px;
+	font-style: 'Times New';
+	background-color: #F5FAFF;
+	display: inline-block;
+	vertical-align: center;
+}
+.TreeBy3:hover, .FourBy4:hover, .FiveBy5:hover {
+	font-size: 21px;
+	color: white;
+	background-color: rgba(27,18,65,.6);
+	font-style: 'Times New';
+	display: inline-block;
+	vertical-align: center;
+}
+
+header {
+	clear: both;
+}
+
+h1 {
+	font-size: 34px;
+	font-family:;
+	color: magenta;
+	vertical-align: center;
+	margin: 5% 5%;
+	
+}
