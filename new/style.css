@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Arizonia);
+
 .content {
 	width: 600px;
 
@@ -10,11 +12,13 @@
 div > .col {
 	background-color: #7988C6;
 	background-image: none;
+	font-family: 'Arizonia';
+	/*visibility: hidden;      only for the text */
 	width: 100px;
 	height: 100px;
 	border: 2px groove #7B83A6;
 	border-radius: 4px;
-	font-size: 24px;
+	font-size: 64px;
 	display: inline-block;
 	margin: 1px;
 
@@ -34,7 +38,7 @@ div > .col {
 }
 .TreeBy3, .FourBy4, .FiveBy5 {
 	font-size: 21px;
-	font-style: 'Times New';
+	font-style: 'Arizonia';
 	background-color: #F5FAFF;
 	display: inline-block;
 	vertical-align: center;
@@ -43,7 +47,7 @@ div > .col {
 	font-size: 21px;
 	color: white;
 	background-color: rgba(27,18,65,.6);
-	font-style: 'Times New';
+	font-style: 'Arizonia';
 	display: inline-block;
 	vertical-align: center;
 }
