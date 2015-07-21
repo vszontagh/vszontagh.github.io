@@ -23,9 +23,9 @@ $(document).ready(function(){
 
 var input = $('input');
 var players = [];
-var button = $('.button');
+var submit = $('.submit');
 
-button.click(function(){
+submit.click(function(){
 var player1 = $('.player1');
 var player2 = $('.player2');
 		
@@ -37,7 +37,7 @@ var player2 = $('.player2');
 	} else if (players[1] === undefined){
 		players.push(input.val());
 		player2.text('The second player (x) is: ' + players[1]); 
-		button.text('Play');	// set the buttom text to play, because none of the statement are met above (both player has value, no longer undefined)
+		//submit.text('Play');	// set the submit button text to play, because none of the statement are met above (both player has value, no longer undefined)
 	} else {
 		player = turn();
 	}
@@ -86,9 +86,12 @@ function playerMove(player) {
 
 		if (player === 'playerX') { 
 
+				// var board = ('.col');
+				// board.
 
-			if ($.isNumeric($(this).text())) {
-				playerXMove.push(parseInt($(this).text()));
+			if (!($(this).text())) {		// if the text is empty it let the player pic the position
+				playerXMove.push(parseInt($(this).attr('id')));
+
 				$(this).text('X');
 				$(this).css('color','white');
 				player = "whatever";				// make sure that this statement is not hit till the next player's move is complete
@@ -101,8 +104,9 @@ function playerMove(player) {
 		}
 		else {
 			//box.css.backgroundImage = 'url(img/ticO.png);';
-			if ($.isNumeric($(this).text())) {
-				playerOMove.push(parseInt($(this).text()));
+			if (!($(this).text())) {
+				playerOMove.push(parseInt($(this).attr('id')));
+				//$(this).css('background-image', 'url(img/totO.png);')
 				$(this).text('O');
 				$(this).css('color','#4791FF');
 				player = "playerX";				// resets to player X to start the if else again
@@ -132,10 +136,11 @@ winningCombo = [
 	[2,4,6]
 ];
 
+var countX = 0;
+var countO = 0;
+
 function hasWinner() {
 	var winner = '';
-	var countX = 0;
-	var countO = 0;
 	var statX = $('.statX');
 	var statO = $('.statO');
 	console.log('X moves: ' + playerXMove);
@@ -149,6 +154,7 @@ function hasWinner() {
 				
 				winner = players[1];
 				countX++;
+				console.log(countX);
 				statX.text(players[1] + ' : ' + countX);
 				$('.think').css('visibility', 'visible');
 				$('.thinkWin').css('visibility', 'visible');
@@ -158,6 +164,7 @@ function hasWinner() {
 			else if (playerOMove.indexOf(winningCombo[i][j]) !== -1 && playerOMove.indexOf(winningCombo[i][j+1]) !== -1 && playerOMove.indexOf(winningCombo[i][j+2]) !== -1) {
 				winner = players[0];
 				countO++;
+				console.log(countO);
 				statO.text( players[0] + ' : ' + countO);
 				$('.think').css('visibility', 'visible');
 				$('.thinkWin').css('visibility', 'visible');
@@ -170,29 +177,25 @@ function hasWinner() {
 	}
 }
 
-function resetBoard() {
-	var reset = $('.reset');
-	var box = $('.col');
-	reset.on('click', function (event) {
-		countO = 0;
-		countX = 0;
-		players = [];
-		player1 = '';
-		players = '';
-		for (var i = 0; i < 9; i++) {
-			box.text('');
+var reset = $('.reset');
+reset.on('click', function() {
+		location.reload();
+});
 
-		}
-		player1.text('The first player (o) is: ');
-		player1.text('The second player (x) is: ');
-		statX.text('');
-		statO.text('');
+var again = $('.again');
 
-	});
+function playAgain() {
+	again.on('click', function(){
+		var board = $('.col');
+		playerOMove=[];
+		playerXMove=[];
+		$('.think').css('visibility','hidden');
+		$('.thinkWin').text('');	// remove the winning message
+		board.text('');			// clear the board
+	});	
 }
 
-resetBoard()
-
+playAgain()
 
 // true or false to player move, condition to not empty arrays
 

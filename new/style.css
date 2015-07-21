@@ -1,6 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Arizonia);
-@import url(http://fonts.googleapis.com/css?family=Raleway);
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic);
 @import url(http://fonts.googleapis.com/css?family=Merienda);
 
 
@@ -17,6 +15,7 @@ body {
 
 #gameBoard {
 	width: 60%;
+	height: 350px;
 	float: right;
 
 }
@@ -25,10 +24,10 @@ div > .col {
 	background-color: rgba(64,64,64,0.8);
 	/*background-color: #7988C6; */
 	background-image: none;
-	font-family: 'Arizonia' cursive;
-	text-align: center;
+	font-family: 'Merienda', cursive;
+	/*text-align: center;
 	vertical-align: center;
-	color: transparent;
+	color: transparent; */
 	/*visibility: hidden;      only for the text */
 	width: 115px;
 	height: 115px;
@@ -63,7 +62,6 @@ input:hover {
 
 button {
 	padding: 5px;
-	width: auto;
 	margin-left: 3px;
 	font-size: 18px;
 	font-family: 'Merienda', cursive;
@@ -85,20 +83,27 @@ h1 {
 button:hover {
 	background-color: rgba(31,31,34,0.8);
 }
+.again, .reset {
+	width: 46.5%
+}
+.submit {
+	width: 40%;
+}
+
 .think {
 	width: 17%;
 	visibility: hidden;
-	height: 15%;
-	top: -180px;
-	left: 650px;
-	position: relative;
+	height: 17%;
+	top: 440px;
+	left: 1190px;
+	position: absolute;
 }
 
 .thinkWin{
 	width: 15%;
 	height: 15%;
-	top: 450px;
-	left: 1220px;
+	top: 440px;
+	left: 1197px;
 	position: absolute;
 	color: #4791FF;
 	font-weight: bold;
