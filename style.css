@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Arizonia);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic);
+@import url(http://fonts.googleapis.com/css?family=Merienda);
+
+.content {
+	width: 600px;
+	margin: 50% 10%;
+}
+#gameBoard {
+	width: 360px;
+	margin: 0;
+}
+.tictac {
+	background-color: #7988C6;
+	background-image: url('https://laurac01.files.wordpress.com/2014/05/20140519-172617-62777211.jpg?w=604');
+	background-size: 100%;
+	background-position: center;
+	width: 100px;
+	height: 100px;
+	border: 2px groove #7B83A6;
+	border-radius: 4px;
+	font-size: 24px;
+	font-family: 'Arizonia', cursive;
+	font-size: 50px;
+	display: inline-block;
+	margin: 2px;
+
+}
+div > .box:hover {
+	background-color: rgba(255,255,255,.4);
+}
+
+.input {
+	
+	padding: 5px;
+	width: 200px;
+	margin-left: 5px;
+	display: inline-block;
+
+}
+.button {
+	padding: 5px;
+	width: auto;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+header {
+	clear: both;
+}
+
+h1 {
+	font-size: 64px;
+	font-family: 'Arizonia', cursive;
+	color: firebrick;
+	margin: 5% 5%;
+	
+}
